@@ -1,1 +1,4 @@
-{"@t":"2019-10-09T17:59:46.4148580Z","@mt":"Hello, world!","@l":"Debug"}
+{"log":"log message\n","grpc.stream":"stderr","time":"2019-04-30T02:12:41.8443515Z"}
+{"log":"log message2\n","grpc.stream":"stderr","time":"2020-05-30T02:12:41.8443515Z"}
+{"log":"log message3\n","grpc.stream":"stderr","time":"2021-01-30T02:12:41.8443515Z"}
+{"log":"log message4\n","grpc.stream":"stderr","time":"2020-08-30T02:12:41.8443515Z"}

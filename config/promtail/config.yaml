@@ -1,27 +1,49 @@
 server:
-   http_listen_port: 9080
-   grpc_listen_port: 0
+  http_listen_port: 9080
+  grpc_listen_port: 0
 
 positions:
   filename: /tmp/positions.yaml
 
 clients:
-  - url: http://localhost:3100/api/prom/push
-  
+  - url: http://loki:3100/loki/api/v1/push
+
 scrape_configs:
-- job_name: myapp
-  static_configs:
-  - targets:
-      - localhost
-    labels:
-      job: varlogs
-      __path__: ./*.json
+# - job_name: system
+#   static_configs:
+#   - targets:
+#       - localhost
+#     labels:
+#       job: varlogs
+#       __path__: /var/log/*log
+- job_name: system
   pipeline_stages:
     - json:
         expressions:
           output: log
           stream: '"grpc.stream"'
           timestamp: time
+  static_configs:
+  - targets:
+      - localhost
+    labels:
+      job: jsonlogs
+      __path__: /etc/promtail/*.json
+
+
+# - job_name: myapp
+#   static_configs:
+#   - targets:
+#       - localhost
+#     labels:
+#       job: myapp
+#       __path__: ./*.json
+#   pipeline_stages:
+#     - json:
+#         expressions:
+#           output: log
+#           stream: '"grpc.stream"'
+#           timestamp: time
 
 
       # we can add more labels for get logs
