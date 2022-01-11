@@ -44,12 +44,12 @@ scrape_configs:
     - json:
         expressions:
           output: output
-          stream: '"stream"'
+          stream: stream
           timestamp: timestamp
 
-    - json:
-        expressions:
-          userId:
-          location:
+    # - json:
+    #     expressions:
+    #       userId:
+    #       location:
         source: extra
       # we can add more labels for get logs
