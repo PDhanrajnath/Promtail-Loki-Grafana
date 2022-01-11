@@ -22,3 +22,9 @@ http://localhost:3100/loki/api/v1/query?query={job=%22containerlogs%22}%20|%20js
   },
   "output": "Allow"
 }
+
+
+{"timestamp": "2022-01-07 12:05:49.785210","stream":"stdout","extra": {"userId": "Dhanrajnath","location": "Warangal","sessionId": "D60044","severity": "Low","category": "Application Access","description": "Application Github has been accessed through the sonet cloud portal","ipAddress": "172.16.4.196","applicationName": "Github","browser": "Google Chrome","violation": "None"},"output": "Allow"}
+{"timestamp": "2022-01-07 12:05:49.785210","stream":"stdout","extra": {"userId": "sonetmock","location": "USA","sessionId": "D60043","severity": "Low","category": "Application Access","description": "Application Github has been accessed through the sonet cloud portal","ipAddress": "172.16.4.196","applicationName": "Github","browser": "Google Chrome","violation": "None"},"output": "Allow"}
+{"timestamp": "2022-01-07 12:05:49.785210","stream":"stdout","extra": {"userId": "sonetmock2","location": "USA1","sessionId": "D60045","severity": "Low","category": "Application Access","description": "Application Github has been accessed through the sonet cloud portal","ipAddress": "172.16.4.196","applicationName": "Github","browser": "Google Chrome","violation": "None"},"output": "Allow"}
+{"timestamp": "2022-01-07 12:05:49.785210","stream":"stdout","extra": {"userId": "zem","location": "hyd","sessionId": "D60048","severity": "Low","category": "Application Access","description": "Application Github has been accessed through the sonet cloud portal","ipAddress": "172.16.4.199","applicationName": "Github","browser": "Google Chrome","violation": "None"},"output": "Allow"}
