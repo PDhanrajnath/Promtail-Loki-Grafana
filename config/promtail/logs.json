@@ -1,4 +1,4 @@
-[{
+{
   "timestamp": "12/01/2021 12:35 PM",
   "userId": "Ed Harris",
   "location": "Estonia",
@@ -12,22 +12,4 @@
   "browser": "Google Chrome",
   "violation": "None",
   "output": "Allow"
-},
-
-{
-  "timestamp": "12/01/2021 11:35 AM",
-  "userId": 'John R',
-  "location": 'San Fransico',
-  "sessionId": 'B80183',
-  "severity": 'Informational',
-  "category": 'Portal Login',
-  "description":
-    'Application Github has been accessed through the sonet cloud portal',
-  "ipAddress": '172.16.4.196',
-  "applicationName": 'Slack',
-  "browser": 'Google Chrome',
-  "violation": 'None',
-  "output": 'Allow',
 }
-
-]

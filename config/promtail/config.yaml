@@ -9,6 +9,23 @@ clients:
   - url: http://loki:3100/loki/api/v1/push
 
 scrape_configs:
+- job_name: containers
+  static_configs:
+  - targets:
+      - localhost
+    labels:
+      job: containerlogs
+      __path__: /var/lib/docker/containers/*/*log
+
+  # --log-opt tag="{{.ImageName}}|{{.Name}}|{{.ImageFullID}}|{{.FullID}}"
+  pipeline_stages:
+  - json:
+      expressions:
+        stream: stream
+        attrs: attrs
+        tag: attrs.tag
+
+
 # - job_name: system
 #   static_configs:
 #   - targets:
@@ -17,33 +34,22 @@ scrape_configs:
 #       job: varlogs
 #       __path__: /var/log/*log
 - job_name: system
-  pipeline_stages:
-    - json:
-        expressions:
-          output: output
-          stream: '"grpc.stream"'
-          timestamp: timestamp
   static_configs:
   - targets:
       - localhost
     labels:
       job: jsonlogs
       __path__: /etc/promtail/*.json
+  pipeline_stages:
+    - json:
+        expressions:
+          output: output
+          stream: '"stream"'
+          timestamp: timestamp
 
-
-# - job_name: myapp
-#   static_configs:
-#   - targets:
-#       - localhost
-#     labels:
-#       job: myapp
-#       __path__: ./*.json
-#   pipeline_stages:
-#     - json:
-#         expressions:
-#           output: log
-#           stream: '"grpc.stream"'
-#           timestamp: time
-
-
+    - json:
+        expressions:
+          userId:
+          location:
+        source: extra
       # we can add more labels for get logs
