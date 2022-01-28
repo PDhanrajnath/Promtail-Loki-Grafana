@@ -1,7 +1,7 @@
 http://localhost:3000/   --> Access Grafana dashboard
 http://localhost:3100/loki/api/v1/query?query={job="jsonlogs"}  --> view recent added logs
 
-
+LOKI HTTP API https://grafana.com/docs/loki/latest/api/#post-lokiapiv1push
 
 http://localhost:3100/loki/api/v1/query?query={job=%22containerlogs%22}%20|%20json
 
