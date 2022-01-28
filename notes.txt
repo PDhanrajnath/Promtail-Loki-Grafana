@@ -28,3 +28,150 @@ http://localhost:3100/loki/api/v1/query?query={job=%22containerlogs%22}%20|%20js
 {"timestamp": "2022-01-07 12:05:49.785210","stream":"stdout","extra": {"userId": "sonetmock","location": "USA","sessionId": "D60043","severity": "Low","category": "Application Access","description": "Application Github has been accessed through the sonet cloud portal","ipAddress": "172.16.4.196","applicationName": "Github","browser": "Google Chrome","violation": "None"},"output": "Allow"}
 {"timestamp": "2022-01-07 12:05:49.785210","stream":"stdout","extra": {"userId": "sonetmock2","location": "USA1","sessionId": "D60045","severity": "Low","category": "Application Access","description": "Application Github has been accessed through the sonet cloud portal","ipAddress": "172.16.4.196","applicationName": "Github","browser": "Google Chrome","violation": "None"},"output": "Allow"}
 {"timestamp": "2022-01-07 12:05:49.785210","stream":"stdout","extra": {"userId": "zem","location": "hyd","sessionId": "D60048","severity": "Low","category": "Application Access","description": "Application Github has been accessed through the sonet cloud portal","ipAddress": "172.16.4.199","applicationName": "Github","browser": "Google Chrome","violation": "None"},"output": "Allow"}
+
+{"timestamp": "2022-01-07 12:05:49.785210","stream":"stdout","extra": "{\"userId\": \"Ed Harris\",\"location\": \"Estonia\",\"sessionId\": \"D60043\",\"severity\": \"Low\",\"category\": \"Application Access\",\"description\": \"Application Github has been accessed through the sonet cloud portal\",\"ipAddress\": \"172.16.4.196\",\"applicationName\": \"Github\",\"browser\": \"Google Chrome\",\"violation\": \"None\"}","output": "Allow"}
+{"timestamp": "2022-01-07 12:05:49.785210","stream":"stdout","extra": {"userId": "zem","location": "hyd","sessionId": "D60048","severity": "Low","category": "Application Access","description": "Application Github has been accessed through the sonet cloud portal","ipAddress": "172.16.4.199","applicationName": "Github","browser": "Google Chrome","violation": "None"},"output": "Allow"}
+
+http://localhost:3100/loki/api/v1/query_range?query={job=%22jsonlogs%22}
+
+
+
+// {
+// "timestamp": "12/01/2021 10:55 AM",
+// "userId": "James Damon",
+// "location": "Boston",
+// "sessionId": "B90183",
+// "severity": "Medium",
+// "category": "Application Access",
+// "description":
+// "Application Github has been accessed through the sonet cloud portal",
+// "ipAddress": "172.16.4.196",
+// "applicationName": "Jira",
+// "browser": "Mozilla",
+// "violation": "None",
+// "output": "Allow",
+// }
+// {
+// "timestamp": "12/01/2021 10:55 AM",
+// "userId": "James Damon",
+// "location": "Boston",
+// "sessionId": "B90183",
+// "severity": "High",
+// "category": "Application Access",
+// "description":
+// "Application Github has been accessed through the sonet cloud portal",
+// "ipAddress": "172.16.4.196",
+// "applicationName": "Jira",
+// "browser": "Mozilla",
+// "violation": "None",
+// "output": "Allow",
+// }
+// {
+// "timestamp": "12/01/2021 10:55 AM",
+// "userId": "James Damon",
+// "location": "Boston",
+// "sdessionId": "B90183",
+// "severity": "Critical",
+// "category": "Application Access",
+// "description":
+// "Application Github has been accessed through the sonet cloud portal",
+// "ipAddress": "172.16.4.196",
+// "applicationName": "Jira",
+// "browser": "Mozilla",
+// "violation": "None",
+// "output": "Allow",
+// }
+// {
+// "timestamp": "12/01/2021 10:55 AM",
+// "userId": "James Damon",
+// "location": "Boston",
+// "sdessionId": "B90183",
+// "severity": "Medium",
+// "category": "Application Access",
+// "description":
+// "Application Github has been accessed through the sonet cloud portal",
+// "ipAddress": "172.16.4.196",
+// "applicationName": "Jira",
+// "browser": "Mozilla",
+// "violation": "None",
+// "output": "Allow",
+// }
+// {
+// "timestamp": "12/01/2021 10:55 AM",
+// "userId": "James Damon",
+// "location": "Boston",
+// "sdessionId": "B90183",
+// "severity": "Medium",
+// "category": "Application Access",
+// "description":
+// "Application Github has been accessed through the sonet cloud portal",
+// "ipAddress": "172.16.4.196",
+// "applicationName": "Jira",
+// "browser": "Mozilla",
+// "violation": "None",
+// "output": "Allow",
+// }
+// {
+// "timestamp": "12/01/2021 10:55 AM",
+// "userId": "James Damon",
+// "location": "Boston",
+// "sdessionId": "B90183",
+// "severity": "Medium",
+// "category": "Application Access",
+// "description":
+// "Application Github has been accessed through the sonet cloud portal",
+// "ipAddress": "172.16.4.196",
+// "applicationName": "Jira",
+// "browser": "Mozilla",
+// "violation": "None",
+// "output": "Allow",
+// }
+// {
+// "timestamp": "12/01/2021 10:55 AM",
+// "userId": "James Damon",
+// "location": "Boston",
+// "sdessionId": "B90183",
+// "severity": "Medium",
+// "category": "Application Access",
+// "description":
+// "Application Github has been accessed through the sonet cloud portal",
+// "ipAddress": "172.16.4.196",
+// "applicationName": "Jira",
+// "browser": "Mozilla",
+// "violation": "None",
+// "output": "Allow",
+// }
+// {
+// "timestamp": "12/01/2021 10:55 AM",
+// "userId": "James Damon",
+// "location": "Boston",
+// "sdessionId": "B90183",
+// "severity": "Medium",
+// "category": "Application Access",
+// "description":
+// "Application Github has been accessed through the sonet cloud portal",
+// "ipAddress": "172.16.4.196",
+// "applicationName": "Jira",
+// "browser": "Mozilla",
+// "violation": "None",
+// "output": "Allow",
+// }
+// {
+// "timestamp": "12/01/2021 10:55 AM",
+// "userId": "James Damon",
+// "location": "Boston",
+// "sdessionId": "B90183",
+// "severity": "Medium",
+// "category": "Application Access",
+// "description":
+// "Application Github has been accessed through the sonet cloud portal",
+// "ipAddress": "172.16.4.196",
+// "applicationName": "Jira",
+// "browser": "Mozilla",
+// "violation": "None",
+// "output": "Allow",
+// }
+
+
+
+
